@@ -1054,6 +1054,12 @@ namespace OpenTK.Platform.iPhoneOS
             set { throw new NotSupportedException(); }
         }
 
+        bool INativeWindow.CursorGrabbed
+        {
+            get { throw new NotSupportedException(); }
+            set { throw new NotSupportedException(); }
+        }
+
         Icon INativeWindow.Icon
         {
             get { throw new NotSupportedException(); }

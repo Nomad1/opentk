@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>OpenTK</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>OpenTK</AssemblyName>
+    <AssemblyName>OpenTK3</AssemblyName>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <Deterministic>true</Deterministic>
@@ -250,7 +250,7 @@
     <Exec Condition="$(OS) == 'Windows_NT' and $(Configuration) == 'Debug'" Command="$(OutputPath)..\..\..\..\Generator.Rewrite\bin\Debug\Rewrite.exe --assembly $(OutputPath)OpenTK.dll --signing-key ..\..\OpenTK.snk --debug" />
     <Exec Condition="$(OS) == 'Windows_NT' and $(Configuration) == 'Release'" Command="$(OutputPath)..\..\..\..\Generator.Rewrite\bin\Release\Rewrite.exe --assembly $(OutputPath)OpenTK.dll --signing-key ..\..\OpenTK.snk" />
     <Exec Condition="$(OS) != 'Windows_NT' and $(Configuration) == 'Debug'" Command="mono $(OutputPath)../../../../Generator.Rewrite/bin/Debug/Rewrite.exe --assembly $(OutputPath)OpenTK.dll --signing-key ../../OpenTK.snk --debug" />
-    <Exec Condition="$(OS) != 'Windows_NT' and $(Configuration) == 'Release'" Command="mono $(OutputPath)../../../../Generator.Rewrite/bin/Release/Rewrite.exe --assembly $(OutputPath)OpenTK.dll --signing-key ../../OpenTK.snk" />
+    <Exec Condition="$(OS) != 'Windows_NT' and $(Configuration) == 'Release'" Command="mono $(OutputPath)../../../../Generator.Rewrite/bin/Release/Rewrite.exe --assembly $(OutputPath)OpenTK3.dll --signing-key ../../OpenTK.snk --dllimport" />
   </Target>
   <ItemGroup>
     <Analyzer Include="..\..\packages\StyleCop.Analyzers\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll">
